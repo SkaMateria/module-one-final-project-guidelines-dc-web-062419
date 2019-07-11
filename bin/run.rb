@@ -5,7 +5,7 @@ require_relative '../config/environment'
 # welcome = "Today's blood-soaked match will be......"
 # # warrior1 =  "#{random_fighter}"
 # # warrior2 = "#{random_monster}"
-# # binding.pry
+binding.pry
 # puts welcome
 # sleep 2.5
 # puts warrior1
@@ -15,3 +15,5 @@ require_relative '../config/environment'
 # puts warrior2
 # sleep 2.5
 # puts "BEGIN!"
+
+binding.pry
