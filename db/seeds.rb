@@ -1,6 +1,6 @@
-# Fighter.destroy_all
-# Monster.destroy_all
-# Battle.destroy_all
+Fighter.destroy_all
+Monster.destroy_all
+Battle.destroy_all
 
 ##### FIGHTERS #####
 
@@ -21,7 +21,7 @@ fighter12 = Fighter.create(name: "A Sexually Manipulative Mallard", health_point
 fighter13 = Fighter.create(name: "Your Idea Of Everyone Else's Perception Of You", health_points: 3, attack: 2, defense: 1)
 fighter14 = Fighter.create(name: "Your Drunk, Racist Uncle", health_points: 69, attack: 69, defense: 69)
 fighter15 = Fighter.create(name: "Your Unchecked Priviledge Personified", health_points: 500, attack: 5, defense: 11)
-fighter16 = Fighter.create(name: "That Time You Might Have Been Racist But Were Too Afraid To Draw Attention To It So You Missed The Opportunity To Better Yourself", health_points: 100, attack: 100, defense: 20)
+fighter16 = Fighter.create(name: "That Time You Might Have Been Racist But Were Too Afraid To Draw Attention To It So You Missed An Opportunity To Better Yourself", health_points: 100, attack: 100, defense: 20)
 
 
 
@@ -47,6 +47,6 @@ mon15 = Monster.create(name: "That One Time You Smoked Crack And Told Your Class
 mon16 = Monster.create(name: "A Dude Explaining To You That The Civil War Was About States Rights", health_points: 999, attack: 999, defense: 999)
 
 
-battle1 = Battles.create(fighter: fighter1, monster: mon1)
-battle2 = Battles.create(fighter: fighter2, monster: mon2)
+random_battle = Battles.create(Fighter.sample, Monster.sample)
+# battle2 = Battles.create(fighter: fighter2, monster: mon2)
 # Battle.create(fighter: fish1, monster: mon1)

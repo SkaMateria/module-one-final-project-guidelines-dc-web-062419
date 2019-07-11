@@ -1,19 +1,19 @@
 require_relative '../config/environment'
 
-# random_monster = Monster.all.sample.name
-# random_fighter = Fighter.all.sample.name
-# welcome = "Today's blood-soaked match will be......"
-# # warrior1 =  "#{random_fighter}"
-# # warrior2 = "#{random_monster}"
-binding.pry
-# puts welcome
+random_monster = Monster.all.sample
+random_fighter = Fighter.all.sample
+welcome = "Today's blood-soaked match will be......"
+fighter_name =  random_fighter.name
+monster_name = random_monster.name
+fighter_hp = random_fighter.health_points
+puts welcome
 # sleep 2.5
-# puts warrior1
+puts fighter_name
+puts "With HP that equals " + "#{random_fighter.health_points}"
 # sleep 1.5
-# puts "-VS-"
+puts "-VS-"
 # sleep 1.5
-# puts warrior2
+puts monster_name
 # sleep 2.5
-# puts "BEGIN!"
-
+puts "BEGIN!"
 binding.pry
