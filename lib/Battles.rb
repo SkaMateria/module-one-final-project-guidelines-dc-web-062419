@@ -49,11 +49,11 @@ class Battle < ActiveRecord::Base
         if fighter.health_points >= monster.health_points
             Battle.create(warrior_id: fighter.id, outcome: "Win")
             Battle.create(warrior_id: monster.id, outcome: "Lose")
-            puts "#{fighter.name} WINS!!"
+            puts Rainbow("#{fighter.name} WINS!!").gold.bright
         else
             Battle.create(warrior_id: monster.id, outcome: "Win")
             Battle.create(warrior_id: fighter.id, outcome: "Lose")
-            puts "#{monster.name} WINS!!"
+            puts Rainbow("#{monster.name} WINS!!").gold.bright
         end
     end
 
