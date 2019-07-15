@@ -96,7 +96,7 @@ module ChooseFighter
         puts "\n"
         puts Rainbow("---------------------------------------------").blue.bright
         puts "\n"
-        sleep(3)
+        gets.chomp
         return fighter
     end
 
@@ -115,7 +115,7 @@ module ChooseFighter
         puts "\n"
         puts Rainbow("---------------------------------------------").blue.bright
         puts "\n"
-        sleep(3)
+        gets.chomp
         return monster
     end
 
