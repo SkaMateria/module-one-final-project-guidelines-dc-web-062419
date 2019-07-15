@@ -21,6 +21,8 @@ class Cli
       case input
       when 'choose fighter'
         begin_battle
+      when 'leaderboards'
+        leaderboard
       when 'exit'
         exit_page
         break

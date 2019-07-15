@@ -1,5 +1,5 @@
 module Leaderboard
-    def Leaderboard
-        Battle.all
+    def leaderboards
+        puts Battle.all
     end
 end
