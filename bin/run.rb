@@ -1,4 +1,5 @@
 require_relative '../config/environment'
+require_relative './cli.rb'
 
 # random_monster = Monster.all.sample
 # random_fighter = Fighter.all.sample
@@ -17,13 +18,19 @@ require_relative '../config/environment'
 # sleep 2.5
 # puts "BEGIN!"
 # binding.pry
-monster = Battle.roll_for_monster
-fighter = Battle.roll_for_fighter
-puts monster.name
+# monster = Battle.roll_for_monster
+# fighter = Battle.roll_for_fighter
+# puts monster.name
 # sleep 1
-puts "-VS-"
+# puts "-VS-"
 # sleep 1
-puts fighter.name
+# puts fighter.name
 # sleep 1
 
-Battle.declare_winner(fighter, monster)
+# Battle.declare_winner(fighter, monster)
+
+prompt = TTY::Prompt.new
+cli = Cli.new(prompt)
+
+cli.run
+

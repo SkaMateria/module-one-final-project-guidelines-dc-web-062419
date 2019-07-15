@@ -31,7 +31,7 @@ class Battle < ActiveRecord::Base
     # end
 
     def self.dice
-        dice = [*1..16]
+        dice = [*0..15]
         dice.sample
     end
 
