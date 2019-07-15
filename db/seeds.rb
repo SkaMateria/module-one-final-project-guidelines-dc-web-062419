@@ -46,7 +46,3 @@ mon14 = Monster.create(name: "Eggs Representing Your Brain On Drugs", health_poi
 mon15 = Monster.create(name: "That One Time You Smoked Crack And Told Your Class About It", health_points: 999, attack: 1, defense: 1)
 mon16 = Monster.create(name: "A Dude Explaining To You That The Civil War Was About States Rights", health_points: 999, attack: 999, defense: 999)
 
-
-random_battle = Battles.create(Fighter.sample, Monster.sample)
-# battle2 = Battles.create(fighter: fighter2, monster: mon2)
-# Battle.create(fighter: fish1, monster: mon1)
