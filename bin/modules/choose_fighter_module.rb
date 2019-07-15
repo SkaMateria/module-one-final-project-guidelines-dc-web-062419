@@ -87,7 +87,8 @@ module ChooseFighter
         vegan_question
         puts Rainbow("Your fighter shall be:").goldenrod
         sleep(1.2)
-        name = Battle.roll_for_fighter.name
+        fighter = Battle.roll_for_fighter
+        name = fighter.name
         puts "\n"
         puts Rainbow("---------------------------------------------").blue.bright
         puts "\n"
@@ -96,6 +97,7 @@ module ChooseFighter
         puts Rainbow("---------------------------------------------").blue.bright
         puts "\n"
         sleep(3)
+        return fighter
     end
 
     def choose_monster
@@ -114,12 +116,13 @@ module ChooseFighter
         puts Rainbow("---------------------------------------------").blue.bright
         puts "\n"
         sleep(3)
+        return monster
     end
+
     
     def begin_battle
         choose_fighter
         choose_monster
-    
     end
 
 end
