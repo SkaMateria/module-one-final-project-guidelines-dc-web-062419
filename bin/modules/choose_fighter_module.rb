@@ -1,54 +1,125 @@
 require "rainbow"
 
+
 module ChooseFighter
 
-def vegan_question
-    sleep(1.2)
-    puts Rainbow("Are you a practicing vegan? Yes or No.").gold
-    answer = gets.chomp.upcase
-        if answer == "YES"
-            sleep(1.5)
-            puts Rainbow("Oh, so you think you're better than people?").gold
-            gets.chomp
-            sleep(1.5)
-            puts Rainbow("In that case...").gold
-            sleep(1.5)
-        elsif answer == "NO"
-            sleep(1)
-            puts Rainbow("Gotcha, so... like... I guess... No. Nevermind. It's fine. It's just.... It's fine.").gold
-            sleep(1.6)
-            puts Rainbow("But don't you see what you're... NOPE! I said I wasn't going to do this...").gold
-            sleep(1.6)
-            puts Rainbow("In that case...").gold
-            sleep(1.5)
-        elsif 
-            sleep(1.4)
-            puts Rainbow("I SAID... \n").gold
-            sleep(1)
-            puts Rainbow("YES... \n").gold
-            sleep(1)
-            puts Rainbow("OR... \n").gold
-            sleep(1)
-            puts Rainbow("NO!!!").gold
-            sleep(1.5)
-            puts Rainbow("In that case...").gold
-        end
-    # end
-end
+    def vegan_question
+        sleep(1.2)
+        puts Rainbow("Are you a practicing vegan? Yes or No.").goldenrod
+        answer = gets.chomp.upcase
+            if answer == "YES"
+                sleep(1.5)
+                puts Rainbow("Oh, so you think you're better than people?").goldenrod
+                puts "\n"
+                gets.chomp
+                sleep(1.5)
+                puts Rainbow("In that case...").goldenrod
+                puts "\n"
+                sleep(1.5)
+            elsif answer == "NO"
+                sleep(1)
+                puts Rainbow("Gotcha, so... like... I guess... No. Nevermind. It's fine. It's just.... It's fine.").goldenrod
+                puts "\n"
+                sleep(2.5)
+                puts Rainbow("But don't you see what you're... NOPE! I said I wasn't going to do this...").goldenrod
+                puts "\n"
+                sleep(2.5)
+                puts Rainbow("Here. Just take your fighter and go...").goldenrod
+                puts "\n"
+                sleep(2)
+            elsif 
+                sleep(1.4)
+                puts Rainbow("I SAID... \n").goldenrod
+                sleep(1)
+                puts Rainbow("YES... \n").goldenrod
+                sleep(1)
+                puts Rainbow("OR... \n").goldenrod
+                sleep(1)
+                puts Rainbow("NO! Understand?").goldenrod
+                sleep(1.5)
+                gets.chomp
+                sleep(1)
+                puts Rainbow("Jesus... here...").goldenrod
+                sleep(1.2)
+            end
+        
+    end
 
-def choose_fighter
-    vegan_question
-    puts Rainbow("Your fighter shall be:").gold
-    sleep(1.2)
-    name = Battle.roll_for_fighter.name
-    puts "\n"
-    puts Rainbow("---------------------------------------------").snow.blink
-    puts "\n"
-    puts Rainbow(name.upcase).powderblue.bright.underline
-    puts "\n"
-    puts Rainbow("---------------------------------------------").snow.blink
-    puts "\n"
-    sleep(2.5)
-end
+    def you_up
+        sleep(1.2)
+        puts Rainbow("You up? Yes or No.").goldenrod
+        answer = gets.chomp.upcase
+            if answer == "YES"
+                sleep(1.5)
+                puts Rainbow("Cool. Cool. Cool. That's tight.").goldenrod
+                puts "\n"
+                gets.chomp
+                sleep(1.5)
+                puts Rainbow("I didn't think this through...").goldenrod
+                puts "\n"
+                sleep(1.5)
+            elsif answer == "NO"
+                sleep(1)
+                puts Rainbow("Noice. That's cool. I respect that.").goldenrod
+                puts "\n"
+                sleep(2.5)
+                puts Rainbow("You up now?").goldenrod
+                puts "\n"
+                gets.chomp
+                sleep(2.5)
+                puts Rainbow("... I just wanted to give you a monster to fight.").goldenrod
+                puts "\n"
+                sleep(2)
+            elsif 
+                sleep(1.4)
+                puts Rainbow("Sorry, new phone. Who dis?").goldenrod
+                puts "\n"
+                sleep(1)
+                gets.chomp
+                puts Rainbow("Here's a monster to fight!").goldenrod
+                puts "\n"
+                sleep(1.2)
+            end
+        
+    end
+
+    def choose_fighter
+        vegan_question
+        puts Rainbow("Your fighter shall be:").goldenrod
+        sleep(1.2)
+        name = Battle.roll_for_fighter.name
+        puts "\n"
+        puts Rainbow("---------------------------------------------").blue.bright
+        puts "\n"
+        puts (Rainbow(name.upcase).green.underline)
+        puts "\n"
+        puts Rainbow("---------------------------------------------").blue.bright
+        puts "\n"
+        sleep(3)
+    end
+
+    def choose_monster
+        you_up
+        puts "\n"
+        puts Rainbow("The monster you shall fight is:").goldenrod
+        puts "\n"
+        sleep(1.7)
+        monster = Battle.roll_for_monster
+        name = monster.name
+        puts "\n"
+        puts Rainbow("---------------------------------------------").blue.bright
+        puts "\n"
+        puts (Rainbow(name.upcase).green.underline)
+        puts "\n"
+        puts Rainbow("---------------------------------------------").blue.bright
+        puts "\n"
+        sleep(3)
+    end
+    
+    def begin_battle
+        choose_fighter
+        choose_monster
+    
+    end
 
 end

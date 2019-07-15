@@ -16,12 +16,11 @@ class Cli
   end
 
   def run
-    # main_menu
     loop do
       input = main_menu
       case input
       when 'choose fighter'
-        choose_fighter
+        begin_battle
       when 'exit'
         exit_page
         break
