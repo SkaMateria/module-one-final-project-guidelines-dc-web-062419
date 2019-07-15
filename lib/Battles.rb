@@ -3,44 +3,17 @@ class Battle < ActiveRecord::Base
     belongs_to :monster
     belongs_to :fighter
 
-    # def self.random_monster
-    #     Monster.all.sample
-    # end
-
-    # def self.random_fighter
-    #     Fighter.all.sample
-    # end
-
-    # def self.health_battle
-    #     fighter = self.random_fighter
-    #     fighter_hp = self.random_fighter.health_points
-    #     fighter_atk = self.random_fighter.attack
-    #     fighter_def = self.random_fighter.defense
-    #     monster = self.random_monster
-    #     monster_hp = self.random_monster.health_points
-    #     monster_atk = self.random_monster.attack 
-    #     monster_def = self.random_monster.defense
-    #     if fighter_hp < monster_hp
-    #         return monster
-    #     elsif 
-    #         fighter_hp > monster_hp
-    #         return fighter
-    #     else
-    #         return nil
-    #     end
-    # end
-
-    def self.dice
+    def self.dice #creates a random 16 sided dice
         dice = [*0..15]
         dice.sample
     end
 
-    def self.roll_for_fighter
+    def self.roll_for_fighter #randomly chooses a fighter
        fighter = Fighter.all[self.dice]
        fighter
     end
 
-    def self.roll_for_monster
+    def self.roll_for_monster #randomly chooses a monster
        monster = Monster.all[self.dice]
        monster
     end
